@@ -31,3 +31,23 @@ p1 {
     padding: 20px
   }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .grid-item {
+    background-color: rgba(255, 252, 244, 0.8);
+    border: 1.5px solid rgba(13, 13, 13, 0.8);
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
