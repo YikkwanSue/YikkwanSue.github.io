@@ -14,3 +14,20 @@ h4 {
 p1 {
     font-family: "Minion Variable Concept";
 }
+
+ h1{
+    font-size:2rem;
+  }
+
+  .outer{
+    border: 2px dashed #3b3635;
+    min-height: 10px;
+  }
+  p{
+    padding: 20px
+  }
+
+  h1, h2, h3{
+    padding: 20px
+  }
+
