@@ -19,3 +19,23 @@ function updateProgressBar() {
   progressBar.style.width = value + "%";
 }
 // Add other functionalities here
+
+// Options change  colors
+document.addEventListener("DOMContentLoaded", function() {
+  var navLinks = document.querySelectorAll("nav ul li a");
+
+  navLinks.forEach(function(link) {
+    link.addEventListener("mouseover", function() {
+      this.style.color = "purple";
+    });
+
+    link.addEventListener("mouseout", function() {
+      this.style.color = ""; // Reset to default color
+    });
+  });
+});
+
+
+
+
+

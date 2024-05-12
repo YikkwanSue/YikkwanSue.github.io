@@ -17,7 +17,7 @@ document.getElementById("inputText").addEventListener("input", function() {
   document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById("container");
   
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 10; i++) {
       const ball = document.createElement("div");
       ball.classList.add("ball");
       container.appendChild(ball);
@@ -46,10 +46,10 @@ document.getElementById("inputText").addEventListener("input", function() {
         ball.style.top = y + "px";
       }
   
-      setInterval(update, 1000 / 60);
+      setInterval(update, 1200 / 70);
     }
   
-    
+
     // Function to handle mouse interaction with balls
     container.addEventListener("mousemove", function(event) {
       const mouseX = event.clientX;
@@ -68,7 +68,7 @@ document.getElementById("inputText").addEventListener("input", function() {
         if (distance < 100) {
           ball.style.backgroundColor = "#e74c3c";
         } else {
-          ball.style.backgroundColor = "#3498db";
+          ball.style.backgroundColor = "#97eac2";
         }
       });
     });
