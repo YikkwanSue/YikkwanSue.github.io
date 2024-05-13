@@ -10,23 +10,21 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-
-  
+<br>
+  <!--
   <body>
     <header>
       <h1>Assignment 2</h1>
-    </header> 
+    </header> -->
 
+    <div class="navigation-bar">
+      <div class="nav-option" onclick="navigateTo('home')">Home</div>
+      <div class="nav-option" onclick="navigateTo('ideas')">Ideas</div>
+      <div class="nav-option" onclick="navigateTo('brief')">Brief</div>
+    </div>
+    
 
-    <!-- Navigation Section -->
-    <nav>
-        <ul>
-          <li><a href="home/index.html">Home</a></li>
-          <li><a href="video/index.html">Video</a></li>
-          <li><a href="music/index.html">Music</a></li>
-          <li><a href="review/index.html">Review</a></li>
-        </ul>
-      </nav>
+    
       <br>
       <br>
       <br>
@@ -44,18 +42,21 @@
   
         <div class="paragraph">
           <p>
-            Hello, I am Yik Kwan, Sue. <br>
-            This is an assignment 2 <span style="color: rgb(177, 116, 210);">assignment 2</span> 
-            of Interactive Design.<br>
-            Hope you enjoy it :)
+            HELLO! I AM YIK KWAN, SUE <br>
+            THIS IS ASSIGNMENT 2 OF INTERACTIVE DESIGN.<br>
+            HOPE YOU ENJOY IT :)
           </p>
           
         </div>
       </div> <br>
       
-      <div class="black-rectangle">
-        <input type="text" id="inputText" placeholder=" Type: yes I do">
-        <button onclick="redirectToYouTube()"> YAY!! </button>
+      <div class="black-rectangle-container">
+        <div class="black-rectangle typing-bar">
+          <input type="text" id="inputText" placeholder=" Type: yes I do">
+        </div>
+        <div class="black-rectangle enter-button">
+          <button onclick="redirectToYouTube()"> YAY!! </button>
+        </div>
       </div>
 
       <br>

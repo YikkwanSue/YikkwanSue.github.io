@@ -6,7 +6,28 @@
     --main-btn-bg-color: #f5f5f5;
   }
   
-
+   /* Search bar */
+  .navigation-bar {
+    display: flex;
+    border: 1.5px solid black;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+  
+  .nav-option {
+    padding: 10px 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-radius 0.3s ease; 
+  }
+  
+  .nav-option:hover {
+    background-color: black;
+    color: white;
+    border-radius: 20px; /* Apply rounded corners on hover */
+  }
+  
+  
+  
   body,
   h1,
   p,
@@ -32,7 +53,7 @@
     margin-left: 100px;
     display: flex;
     justify-content: space-between;
-    line-height: 1.1;
+    line-height: 1.12;
     font-size: 70px;
   }
 
@@ -51,21 +72,57 @@
       display: flex;
       justify-content: space-between;
       align-self: flex-end;
-      margin-right: 100px; 
       text-align: right;
-      font-size: 18px;
+      font-size: 18.5px;
       line-height: 1.2;
     }
 
-    .black-rectangle {
-      align-self: flex-end;
+
+.black-rectangle-container {
+  display: flex;
+  align-self: flex-end;
+      margin-right: 100px;
+}
+
+/* Typing Bar */
+.typing-bar {
+  align-self: flex-end;
+      display: flex;
+  border: 1.5px solid rgb(61, 61, 61);
+  border-radius: 22px;
+  padding: 10px;
+}
+
+.typing-bar input[type="text"] {
+  align-self: flex-end;
       margin-right: 100px;
       display: flex;
-      font-size: 15px;
+  border: none;
+  background-color: transparent;
+  color: rgb(11, 11, 11);
+  padding: 0;
+  width: 150px; 
+}
 
-      
-    }
-      
+/* Enter Button */
+
+.enter-button {
+  margin-left: 10px; /* Add margin between the typing bar and the button */
+}
+
+.enter-button button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+    
+    
+
+
   
   /* Add additional styles as needed */
   

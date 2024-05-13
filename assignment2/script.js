@@ -4,6 +4,18 @@ const playPauseImg = document.querySelector("#play-pause-img");
 const progressBar = document.querySelector("#progress-bar-fill");
 video.removeAttribute("controls");
 
+// seacrhing bar;
+function navigateTo(page) {
+  if (page === 'home') {
+    window.location.href = 'index.html';
+  } else if (page === 'ideas') {
+    window.location.href = 'ideas/index.html'; 
+  } else if (page === 'brief') {
+    window.open('https://rmit.instructure.com/courses/128931/assignments/924869', '_blank');
+  }
+}
+
+
 // playPauseBtn.addEventListener("click", togglePlayPause);
 video.addEventListener("timeupdate", updateProgressBar);
 function togglePlayPause() {
@@ -182,13 +194,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function redirectToYouTube() {
-  // Get the typed text from the input field
   var typedText = document.getElementById('inputText').value;
-  
-  // Check if the typed text is "yes i do"
   if (typedText.toLowerCase() === "yes i do") {
-    // Open the YouTube link in a new window
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
   }
 }
+
 
