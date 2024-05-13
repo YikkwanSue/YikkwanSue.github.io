@@ -1,61 +1,32 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const container = document.getElementById("container");
-  
-    // Create and append balls to the container
-    for (let i = 0; i < 5; i++) {
-      const ball = document.createElement("div");
-      ball.classList.add("ball");
-      container.appendChild(ball);
-  
-      // Set initial position and velocity for each ball
-      let x = Math.random() * window.innerWidth;
-      let y = Math.random() * window.innerHeight;
-      let vx = (Math.random() - 0.5) * 10;
-      let vy = (Math.random() - 0.5) * 10;
-  
-      // Function to update ball's position
-      function update() {
-        // Update position
-        x += vx;
-        y += vy;
-  
-        // Bounce off walls
-        if (x < 0 || x + ball.offsetWidth > window.innerWidth) {
-          vx *= -1;
-        }
-        if (y < 0 || y + ball.offsetHeight > window.innerHeight) {
-          vy *= -1;
-        }
-  
-        // Update ball's position
-        ball.style.left = x + "px";
-        ball.style.top = y + "px";
-      }
-  
-      // Update position periodically
-      setInterval(update, 1000 / 60);
-    }
-  
-    // Function to handle mouse interaction with balls
-    container.addEventListener("mousemove", function(event) {
-      const mouseX = event.clientX;
-      const mouseY = event.clientY;
-  
-      // Loop through all balls and calculate distance from mouse
-      const balls = document.querySelectorAll(".ball");
-      balls.forEach(ball => {
-        const ballX = parseFloat(ball.style.left) + ball.offsetWidth / 2;
-        const ballY = parseFloat(ball.style.top) + ball.offsetHeight / 2;
-        const distanceX = mouseX - ballX;
-        const distanceY = mouseY - ballY;
-        const distance = Math.sqrt(distanceX ** 2 + distanceY ** 2);
-  
-        // React to mouse proximity
-        if (distance < 100) {
-          ball.style.backgroundColor = "#e74c3c";
-        } else {
-          ball.style.backgroundColor = "#3498db";
+  const submitButton = document.getElementById("submit");
+  submitButton.addEventListener("click", showMessage);
+
+  function showMessage() {
+    const rating = document.getElementById("myTemp").value;
+    if (rating !== "") {
+      const modal = document.createElement("div");
+      modal.classList.add("modal");
+      modal.innerHTML = `
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Thank you for rating!</p>
+        </div>
+      `;
+      document.body.appendChild(modal);
+
+      const closeButton = document.querySelector(".close");
+      closeButton.addEventListener("click", function() {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", function(event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
         }
       });
-    });
-  });
+    } else {
+      alert("Please enter a rating before submitting.");
+    }
+  }
+});

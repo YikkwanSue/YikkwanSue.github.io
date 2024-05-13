@@ -1,11 +1,12 @@
 :root {
     --primary-bg-color: #f4f4f4;
-    --text-color: #333;
-    --main-bg-color: #333;
+    --text-color: #0d0d0d;
+    --main-bg-color: #242424;
     --main-text-color: #fff;
-    --main-btn-bg-color: #938989;
+    --main-btn-bg-color: #f5f5f5;
   }
   
+
   body,
   h1,
   p,
@@ -13,6 +14,7 @@
     margin: 0;
     padding: 0;
   }
+
   
   body {
     font-family: Montserrat; font-weight: 430;
@@ -30,10 +32,17 @@
     margin-left: 100px;
     display: flex;
     justify-content: space-between;
-    line-height: 1.5;
-    font-size: 55px;
+    line-height: 1.1;
+    font-size: 70px;
+  }
 
-
+ p6 {
+    align-self: flex-start; 
+    margin-left: 105px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.1;
+    font-size: 15px;
   }
 
   .paragraph {
@@ -46,6 +55,15 @@
       text-align: right;
       font-size: 18px;
       line-height: 1.2;
+    }
+
+    .black-rectangle {
+      align-self: flex-end;
+      margin-right: 100px;
+      display: flex;
+      font-size: 15px;
+
+      
     }
       
   
@@ -121,7 +139,7 @@
   .progress-bar {
     width: 100%;
     height: 10px;
-    background-color: #ddd;
+    background-color: #d0d0d0;
     margin-top: 10px;
     overflow: hidden;
   }
@@ -134,6 +152,68 @@
     transition: width 0.3s ease;
   }
   
+
+
+
+  .outer {
+    border: 1px dashed #50504a;
+    width: 1000px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    gap: 1rem;
+  }
+  
+  input,
+  button {
+    padding: 1px;
+  }
+  
+  .inner {
+    flex: 1;
+    width: 100px;
+    min-height: 100px;
+    background-color: rgb(240, 220, 212);
+    border: 4px solid rgb(45, 45, 77);
+  }
+  
+  p {
+   line-height: 20px;
+  }
+  
+  a,
+  span {
+    display: none;
+  }
+  
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 18;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+  align-items: center;
+}
+
+
   /* Footer styling */
   footer {
     background-color: var(--main-bg-color);
@@ -141,4 +221,14 @@
     text-align: center;
     padding: 10px 0;
     width: 100%;
+  }
+
+  /* https://colorhunt.co/palette/1a120b3c2a21d5cea3e5e5cb */
+
+  .ball {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #da9ff5;
   }

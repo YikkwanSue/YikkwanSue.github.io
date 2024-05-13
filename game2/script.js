@@ -1,74 +1,49 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const songs = [
-      "Yesterday",
-      "Bohemian Rhapsody",
-      "Imagine",
-      "Let It Be",
-      "Hotel California",
-      "Stairway to Heaven",
-      "Hey Jude",
-      "Smells Like Teen Spirit",
-      "Like a Rolling Stone",
-      "Sweet Child o' Mine"
-    ];
-    const gameBoard = document.getElementById('game-board');
-    let currentSong = "";
-    let guessedLetters = [];
+    const keys = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    const keyDisplay = document.getElementById("key-display");
+    const guessInput = document.getElementById("guess-input");
+    const timerDisplay = document.getElementById("timer");
+    let timerInterval;
+    let currentKey;
+    let timeLeft = 5;
   
-    // Function to start a new game
-    function newGame() {
-      currentSong = getRandomSong();
-      guessedLetters = [];
-      displaySong();
+    // Function to start the game
+    function startGame() {
+      guessInput.value = "";
+      timeLeft = 5;
+      displayNewKey();
+      timerInterval = setInterval(updateTimer, 1000);
     }
   
-    // Function to get a random song from the list
-    function getRandomSong() {
-      return songs[Math.floor(Math.random() * songs.length)].toUpperCase();
+    // Function to display a new key
+    function displayNewKey() {
+      currentKey = keys[Math.floor(Math.random() * keys.length)];
+      keyDisplay.textContent = currentKey;
     }
   
-    // Function to display the blanks for the current song
-    function displaySong() {
-      gameBoard.innerHTML = "";
-      for (let letter of currentSong) {
-        if (letter === " ") {
-          gameBoard.innerHTML += "<div class='blank'>&nbsp;</div>";
-        } else if (guessedLetters.includes(letter)) {
-          gameBoard.innerHTML += `<div class='blank'>${letter}</div>`;
-        } else {
-          gameBoard.innerHTML += "<div class='blank'></div>";
-        }
-      }
-      gameBoard.innerHTML += "<br><input type='text' id='guessInput' placeholder='Enter a letter'>";
-      document.getElementById("guessInput").addEventListener("keyup", checkGuess);
-    }
-  
-    // Function to check the player's guess
-    function checkGuess(event) {
-      const guess = event.target.value.toUpperCase();
-      if (guess && /[A-Z]/.test(guess) && !guessedLetters.includes(guess)) {
-        guessedLetters.push(guess);
-        displaySong();
-        if (!currentSong.includes(guess)) {
-          alert(`Oops! "${guess}" is not in the song title.`);
-        }
-      }
-      event.target.value = "";
-      if (guessedLetters.length === currentSong.replace(/ /g, "").length) {
-        setTimeout(() => {
-          if (confirm(`Congratulations! You guessed the song "${currentSong}"!\n\nDo you want to play again?`)) {
-            newGame();
-          }
-        }, 500);
+    // Function to update the timer
+    function updateTimer() {
+      if (timeLeft > 0) {
+        timeLeft--;
+        timerDisplay.textContent = timeLeft;
+      } else {
+        clearInterval(timerInterval);
+        alert("Time's up! You lose.");
+        startGame();
       }
     }
   
-    // Function to restart the game
-    window.restartGame = function() {
-      newGame();
-    };
+    // Function to check if the pressed key is correct
+    window.checkKey = function(event) {
+      const pressedKey = event.key.toUpperCase();
+      if (pressedKey === currentKey) {
+        clearInterval(timerInterval);
+        alert("Congratulations! You pressed the correct key.");
+        startGame();
+      }
+    }
   
-    // Start the game
-    newGame();
+    // Start the game when the page loads
+    startGame();
   });
   

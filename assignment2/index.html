@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
+
+  
   <body>
-     <!-- Header Section 
     <header>
-      <h1>Music For Relaxation</h1>
+      <h1>Assignment 2</h1>
     </header> 
 
 
@@ -24,7 +25,6 @@
           <li><a href="video/index.html">Video</a></li>
           <li><a href="music/index.html">Music</a></li>
           <li><a href="review/index.html">Review</a></li>
-          <!-- Add or remove navigation items as needed -->
         </ul>
       </nav>
       <br>
@@ -32,20 +32,32 @@
       <br>
       <div class="header">
         <h1 class="left-align">BROWERIBASED <br> INTERACTIVE <br> EXPERIMENT</h1>
-      </div>
-      <br><br><br>
+      </div><br>
+      <p6>Video Art</p6>
+      
+      <br>
+      
+  
+      <br><br> <br>
+
+     
   
         <div class="paragraph">
           <p>
             Hello, I am Yik Kwan, Sue. <br>
-            This is an <span style="color: rgb(174, 41, 245);">assignment 2</span> 
+            This is an assignment 2 <span style="color: rgb(177, 116, 210);">assignment 2</span> 
             of Interactive Design.<br>
             Hope you enjoy it :)
           </p>
           
         </div>
-      </div>
+      </div> <br>
       
+      <div class="black-rectangle">
+        <input type="text" id="inputText" placeholder=" Type: yes I do">
+        <button onclick="redirectToYouTube()"> YAY!! </button>
+      </div>
+
       <br>
       <br>
       <br>
@@ -110,6 +122,42 @@
     </main>
 
     <br>   <br>
+
+            <!-- Number -->
+      <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS examples</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Space+Grotesk&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="script.js" defer></script> -->
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+    <div class="outer">
+      <p>Rate this Song</p>
+      <input type="number" id="myTemp" />
+      <button id="submit" onclick="checkWeather()">Submit</button>
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Thank you for rating!<br> <br> (refresh page) </p>
+        </div>
+      
+      </div>
+
+    </div>
+  </body>
+    
+  
+  
     <!-- Footer Section -->
     <footer>
       <p>&copy; 2024 Media Player Website. All rights reserved.</p>
@@ -120,3 +168,8 @@
     </footer>
   </body>
 </html>
+
+<body>
+  <div class="container" id="container"></div>
+  <script src="script.js"></script>
+</body>
