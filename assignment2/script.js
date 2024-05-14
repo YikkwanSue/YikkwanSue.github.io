@@ -9,11 +9,29 @@ function navigateTo(page) {
   if (page === 'home') {
     window.location.href = 'index.html';
   } else if (page === 'ideas') {
-    window.location.href = 'ideas/index.html'; 
+    window.open('https://www.pinterest.com.au/pin/4644405859239317/', '_blank');
   } else if (page === 'brief') {
     window.open('https://rmit.instructure.com/courses/128931/assignments/924869', '_blank');
   }
 }
+
+// logo function, sounds;
+
+var singLogo = document.getElementById('sing-logo');
+
+singLogo.addEventListener('mouseover', function() {
+    singLogo.src = 'sing2.png';
+});
+
+singLogo.addEventListener('mouseout', function() {
+    singLogo.src = 'sing.png';
+});
+
+singLogo.addEventListener('click', function() {
+    var audio = new Audio('saxophone_sound.mp3');
+    audio.play();
+});
+
 
 
 // playPauseBtn.addEventListener("click", togglePlayPause);
@@ -190,8 +208,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
-
-
 
 function redirectToYouTube() {
   var typedText = document.getElementById('inputText').value;

@@ -26,11 +26,7 @@
     border-radius: 20px; /* Apply rounded corners on hover */
   }
   
-  
-  
-  body,
-  h1,
-  p,
+
   ul {
     margin: 0;
     padding: 0;
@@ -56,6 +52,10 @@
     line-height: 1.12;
     font-size: 70px;
   }
+
+  h2{font-size: 25px;
+    font-weight: 450;}
+
 
  p6 {
     align-self: flex-start; 
@@ -119,12 +119,10 @@
   cursor: pointer;
 }
 
-    
-    
 
+  /* Add additional styles as needed */
 
   
-  /* Add additional styles as needed */
   
   /* Create a container for the main content */
   .container {
@@ -268,6 +266,17 @@
   width: 80%;
   text-align: center;
   align-items: center;
+}
+
+
+/* singing logo */
+#sing-logo {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  cursor: pointer;
+  width: 150px;
+  height: auto; 
 }
 
 
