@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <title>Sue Assignment 2</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+
+        <style>
+            .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px;
+            }
+        </style>
+    </head>
+    <meta charset="UTF-8">
+
+    <body style="background-color: rgb(255, 255, 255);">
+
+      
+        <html lang="en">
+            <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Assignment 2</title>
+            </head>
+            <body>
+            <center>
+                <h1>Assignment 2 logo test &#128512;</h1>
+                <b><p style="color:rgb(155, 98, 157);">YikKwan, Sue (s3991659)</p></b>
+            </center>
+            </body>
+            </html>
+           
+
+        <div class="row">
+            <div class="image-container"><img id="img1" src="img/1.png" onmouseover= "this,src='img/1.1.png'; "onmouseover="this,src='img/1.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="img2" src="img/2.png" onmousedown= "this,src='img/2.1.png'; "onmouseup="this,src='img/2.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="img3" src="img/3.png" onmouseover= "this,src='img/3.1.png'; "onmouseover="this,src='img/3.png';" height="200" width="200"/></div>
+        </div>
+
+    
+            </div>
+
+        <div class="row">
+            <div class="image-container"><img id="img7" src="img/7.png" onmousedown= "this,src='img/7.1.png'; "onmouseup="this,src='img/7.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="img8" src="img/8.png" onmousedown= "this,src='img/8.1.png'; "onmouseup="this,src='img/8.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="img9" src="img/9.png" onmouseover= "this,src='img/9.1.png'; "onmouseover="this,src='img/9.png';" height="200" width="200"/></div>
+        </div>
+
+        <script>
+            var sound1 = new buzz.sound("sound/Wood Golf Club Hit Ball.mp3");
+            var sound2 = new buzz.sound("sound/Window Close Series.mp3");
+            var sound3 = new buzz.sound("sound/Cartoon Boing.mp3");
+            var sound7 = new buzz.sound("sound/Slap with Glove.mp3");
+            var sound8 = new buzz.sound("sound/Small Glass Pane Shatter.mp3");
+            var sound9 = new buzz.sound("sound/Sniffle.mp3");
+
+            window.onload = function() {
+                document.getElementById('img1').addEventListener('click', function () {sound1.play(); });  
+                document.getElementById('img2').addEventListener('click', function () {sound2.play(); });
+                document.getElementById('img3').addEventListener('click', function () {sound3.play(); });
+                document.getElementById('img7').addEventListener('click', function () {sound7.play(); }); 
+                document.getElementById('img8').addEventListener('click', function () {sound8.play(); }); 
+                document.getElementById('img9').addEventListener('click', function () {sound9.play(); });
+            }
+            
+        </script>  
+    </body>
+    
+</html>
+
