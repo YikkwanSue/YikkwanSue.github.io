@@ -11,7 +11,8 @@ function navigateTo(page) {
   } else if (page === 'ideas') {
     window.open('https://www.pinterest.com.au/pin/4644405859239317/', '_blank');
   } else if (page === 'brief') {
-    window.open('https://rmit.instructure.com/courses/128931/assignments/924869', '_blank');
+    window.location.href = 'ideas/index.html';
+    ;
   }
 }
 
