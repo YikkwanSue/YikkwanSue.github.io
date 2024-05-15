@@ -36,7 +36,12 @@
   .nav-option:hover {
     background-color: black;
     color: white;
-    border-radius: 20px; /* Apply rounded corners on hover */
+    border-radius: 20px; 
   }
 
   h2{font-size: 23px; font-weight: 400;}
+
+  img {
+    width: 80%; 
+    height: auto; 
+}
