@@ -96,12 +96,12 @@ document.getElementById('custom-video-player').addEventListener('click', functio
 });
 
 // Add other functionalities here
-// Adjust playlist bar
+// Adjust playlist bar: sound on and off, fullscreen
 
 
 
-
-// Options change  colors
+// TESTING
+// change color;
 document.addEventListener("DOMContentLoaded", function() {
   var navLinks = document.querySelectorAll("nav ul li a");
   
