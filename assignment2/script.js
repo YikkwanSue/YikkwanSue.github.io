@@ -119,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function() {
   function openModal() {
     var modal = document.getElementById("modal");
     modal.style.display = "block";
-    
   }
 
   var submitButton = document.getElementById("submit");
