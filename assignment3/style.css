@@ -1,26 +1,27 @@
 :root {
-    --primary-bg-color: #f4f4f4;
+    --primary-bg-color: #f9f7ef;
     --text-color: #0d0d0d;
     --main-bg-color: #242424;
     --main-text-color: #fff;
     --main-btn-bg-color: #f5f5f5;
   }
+
   
    /* Search bar */
   .navigation-bar {
     display: flex;
-    border-radius: 40px;
+    border-radius: 20px;
     overflow: hidden;
   }
   
   .nav-option {
-    padding: 10px 50px;
+    padding: 10px 60px;
     cursor: pointer;
     transition: background-color 0.3s ease, border-radius 0.3s ease; 
   }
   
   .nav-option:hover {
-    background-color: black;
+    background-color: #725540;
     color: white;
     border-radius: 20px; /* Apply rounded corners on hover */
   }
@@ -30,6 +31,8 @@
     margin: 0;
     padding: 0;
   }
+
+  h1 {font-family:Lao MN; font-weight: 150;}
 
   
   body {
@@ -55,5 +58,208 @@
   h2{font-size: 25px;
     font-weight: 450;}
 
+       /* first page */
 
- 
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 1000px;
+      align-items: center;
+  }
+  
+  .left-side {
+      flex: 1;
+      padding: 10px;
+  }
+  
+  .left-side h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
+      color: #333;
+      font-family: Lao MN;
+      font-weight: 200;
+  }
+  
+  .left-side p {
+      font-size: 17px;
+      margin-bottom: 20px;
+      color: #000000;
+      
+  }
+  
+  .join-button {
+      padding: 10px 20px;
+      background-color: transparent;
+      border: 2px solid #725540;
+      border-radius: 20px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .join-button:hover {
+      background-color: #72554c;
+      color: #fff;
+  }
+  
+  .right-side {
+      flex: 0.8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .bread-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+  }
+
+
+____
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+}
+
+.title {
+  font-family: 'Georgia', serif;
+  font-size: 2em;
+  margin: 0;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #000;
+  table-layout: fixed;
+}
+
+.title-cell {
+  border-bottom: 1px solid #000;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.products-row {
+  border-bottom: 1px solid #000;
+}
+
+.product {
+  text-align: center;
+  border-right: 1px solid #000;
+  padding: 20px;
+}
+
+.product:last-child {
+  border-right: none;
+}
+
+.product img {
+  width: 80%;
+  height: auto;
+  max-width: 150px;
+}
+
+.buttons-row {
+  border-top: 1px solid #000;
+}
+
+.buttons {
+  text-align: center;
+  padding: 10px;
+  border-right: 1px solid #000;
+}
+
+.buttons:last-child {
+  border-right: none;
+}
+
+button {
+  display: block;
+  width: 100px;
+  margin: 7px ;
+  padding: 1px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  background-color: #f9f7ef;
+  color: #020202;
+  transition: background-color 0.3s;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between buttons */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between buttons */
+}
+
+button:hover {
+  background-color: #ffebb0;
+}
+
+/* Why choose us */
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center elements horizontally */
+  justify-content: center; /* Center elements vertically */
+  width: 90%;
+  max-width: 400px; /* Adjust the max width as needed */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 20px; /* Adjust font size as needed */
+  margin-bottom: 20px;
+  font-family:Lao MN; font-weight: 50;
+}
+
+.bread1-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Space between the image and text */
+}
+
+.body-text {
+  font-size: 14px; /* Adjust font size as needed */
+  color: #201f1f;
+  margin: 0; /* Remove default margins */
+  text-align: center; /* Align text to center */
+}
+
+.ball-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure balls are above other content */
+}
+
+.ball {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 80%;
+  background-color: #e2cac0;
+}
