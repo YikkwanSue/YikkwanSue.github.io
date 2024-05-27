@@ -1,0 +1,59 @@
+:root {
+    --primary-bg-color: #f4f4f4;
+    --text-color: #0d0d0d;
+    --main-bg-color: #242424;
+    --main-text-color: #fff;
+    --main-btn-bg-color: #f5f5f5;
+  }
+  
+   /* Search bar */
+  .navigation-bar {
+    display: flex;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+  
+  .nav-option {
+    padding: 10px 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-radius 0.3s ease; 
+  }
+  
+  .nav-option:hover {
+    background-color: black;
+    color: white;
+    border-radius: 20px; /* Apply rounded corners on hover */
+  }
+  
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  
+  body {
+    font-family: Montserrat; font-weight: 430;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+  }
+  
+  .header {
+    align-self: flex-start; 
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.12;
+    font-size: 70px;
+  }
+
+  h2{font-size: 25px;
+    font-weight: 450;}
+
+
+ 
