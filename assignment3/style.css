@@ -73,7 +73,7 @@
   }
   
   .left-side h1 {
-      font-size: 55px;
+      font-size: 50px;
       margin-bottom: 15px;
       color: #333;
       font-family: Lao MN;
@@ -81,7 +81,7 @@
   }
   
   .left-side p {
-      font-size: 17px;
+      font-size: 15px;
       margin-bottom: 20px;
       color: #000000;
       
@@ -90,7 +90,7 @@
   .join-button {
       padding: 10px 20px;
       background-color: transparent;
-      border: 2px solid #725540;
+      border: 2px solid #3a3736;
       border-radius: 20px;
       font-size: 1em;
       cursor: pointer;
@@ -99,6 +99,7 @@
   
   .join-button:hover {
       background-color: #72554c;
+      border: 2px solid #72554c;
       color: #fff;
   }
   
@@ -112,10 +113,19 @@
   .bread-image {
       max-width: 100%;
       height: auto;
-      border-radius: 10px;
+      border-radius: px;
   }
 
+  .dog-image {
+    position: absolute;
+    width: 450px; /* Adjust size as needed */
+    height: auto;
+    top: 430px; /* Adjust top position as needed */
+    left: 47%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the image */
+    z-index: 0; /* Ensure it is behind the title */
 
+  }
 ____
 
 body {
@@ -249,17 +259,41 @@ button:hover {
   text-align: center; /* Align text to center */
 }
 
-.ball-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1; /* Ensure balls are above other content */
-}
-
 .ball {
-  position: absolute;
   width: 50px;
   height: 50px;
-  border-radius: 80%;
   background-color: #e2cac0;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Adjust positions here */
+#ball1 {
+  top: 1300px;
+  left: 50px;
+}
+
+#ball2 {
+  top: 1700px;
+  left: 100px;
+}
+
+#ball3 {
+  top: 1900px;
+  left: 800px;
+}
+
+#ball4 {
+  top: 1500px;
+  left: 900px;
+}
+
+#ball5 {
+  top: 1500px;
+  left: 300px;
+}
+
+#ball6 {
+  top: 1300px;
+  left: 1000px;
 }
