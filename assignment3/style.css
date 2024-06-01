@@ -85,24 +85,10 @@
       margin-bottom: 20px;
       color: #000000;
       
+      
   }
   
-  .join-button {
-      padding: 10px 20px;
-      background-color: transparent;
-      border: 2px solid #3a3736;
-      border-radius: 20px;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .join-button:hover {
-      background-color: #72554c;
-      border: 2px solid #72554c;
-      color: #fff;
-  }
-  
+
   .right-side {
       flex: 0.8;
       display: flex;
@@ -111,16 +97,17 @@
   }
   
   .bread-image {
-      max-width: 100%;
-      height: auto;
-      border-radius: px;
-  }
+    max-width: 70%;
+    height: auto;
+    padding-top: 120px; /* Adjust the value as needed */
 
+  }
+  
   .dog-image {
     position: absolute;
-    width: 450px; /* Adjust size as needed */
+    width: 400px; /* Adjust size as needed */
     height: auto;
-    top: 430px; /* Adjust top position as needed */
+    top: 480px; /* Adjust top position as needed */
     left: 47%; /* Center horizontally */
     transform: translateX(-50%); /* Center the image */
     z-index: 0; /* Ensure it is behind the title */
@@ -145,7 +132,7 @@ body {
 
 .title {
   font-family: 'Georgia', serif;
-  font-size: 2em;
+  font-size: 15px;
   margin: 0;
 }
 
@@ -160,6 +147,8 @@ body {
   border-bottom: 1px solid #000;
   text-align: center;
   padding: 10px 0;
+  font-size: 12px;
+
 }
 
 .products-row {
@@ -255,45 +244,178 @@ button:hover {
 .body-text {
   font-size: 14px; /* Adjust font size as needed */
   color: #201f1f;
-  margin: 0; /* Remove default margins */
   text-align: center; /* Align text to center */
 }
 
+
+
+
+
+ /* Staff Card */
+ .staff-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  font-size: 18px;}
+
+  .staff-card {
+  width: calc(33.33% - 40px); /* Adjust the width and space between */
+  border: 1px solid #000;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 40px; /* Add margin between each card */
+}
+
+.card-header {
+  background-color: #f9f7ef;
+  border-bottom: 1px solid #000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px 0;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card-image img {
+  width: 40%; /* Adjust the image size */
+  margin-top: 30px;
+}
+
+.card-image img#chiefImage {
+  width: 80px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.card-image img:hover {
+  transform: scale(1.1); /* Optionally, scale the image on hover */
+}
+
+.card-footer {
+  padding: 10px 0;
+}
+
+/* ENJOY OUR FOOD*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+}
+
+.left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-side .cookie-image {
+  max-width: 100%;
+  width: 80%;
+}
+
+.left-side .caption {
+  margin-top: 10px;
+  font-size: 17px;
+  color: #252525;
+}
+
+.right-side {
+  flex: 1.5;
+}
+
+.right-side h1 {
+  font-size: 30px;
+  margin-bottom: 250px;
+}
+
+
+.right-side .sub-heading {
+  font-size: 17px;
+  font-family: Arial, sans-serif;
+  color: #2b2b28;
+  margin-bottom: 20px;
+    flex-direction: column;
+
+
+}
+
+.right-side hr {
+  border: none;
+  border-top: 2px solid #000;
+  margin-bottom: 20px;
+}
+
+
+
+.bottom-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-item {
+  display: flex;
+  align-items: center;
+  margin-top: 30px; /* This moves the items down */
+  margin-bottom: -30px;
+}
+
+.text-item .number {
+  font-size: 24px;
+  margin-right: 10px;
+  font-family: Arial, sans-serif;
+
+}
+
+.text-item .text {
+  font-size: 17px;
+}
+
+
+.container1 {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .ball {
-  width: 50px;
-  height: 50px;
-  background-color: #e2cac0;
+  width: 60px;
+  height: 60px;
+  background-color: #ffd38d;
   border-radius: 50%;
   position: absolute;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
-/* Adjust positions here */
-#ball1 {
-  top: 1300px;
-  left: 50px;
+.ball:hover {
+  background-color: #ffbe5f; /* Dark brown */
 }
 
-#ball2 {
-  top: 1700px;
-  left: 100px;
-}
+* Manually position each ball */
+    #ball1 {
+      top: 40%;
+      left: 40%;
+    }
 
-#ball3 {
-  top: 1900px;
-  left: 800px;
-}
+    #ball2 {
+      top: 30%;
+      left: 10%;
+    }
 
-#ball4 {
-  top: 1500px;
-  left: 900px;
-}
+    #ball3 {
+      top: 60%;
+      left: 80%;
+    }
 
-#ball5 {
-  top: 1500px;
-  left: 300px;
-}
-
-#ball6 {
-  top: 1300px;
-  left: 1000px;
-}
+    #ball5 {
+      top: 20%;
+      left: 80%;
+    }
