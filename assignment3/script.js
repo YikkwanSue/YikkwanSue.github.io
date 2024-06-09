@@ -32,6 +32,66 @@ document.addEventListener("DOMContentLoaded", function() {
   managerImage.addEventListener('mouseout', function() {
     managerImage.src = 'manager.png';
   });
+  
 });
 
 
+
+
+const chiefAudio = new Audio('Chief.mp3');
+
+// Add an event listener to the chief image
+document.getElementById('chiefImage').addEventListener('click', function() {
+  chief.mp3.play();
+});
+
+ document.addEventListener('DOMContentLoaded', function() {
+      const chiefImage = document.getElementById('chiefImage');
+      const chiefAudio = document.getElementById('chiefAudio');
+
+      chiefImage.addEventListener('click', function() {
+        chiefAudio.play();
+      });
+    });
+document.addEventListener("DOMContentLoaded", function() {
+  var text = " and our bakers are true artisans dedicated to their craft. We support local farmers and suppliers, giving back to our community with every bake.";
+  var container = document.querySelector(".body-text");
+  var index = 0;
+
+  function typeWriter() {
+    if (index < text.length) {
+      container.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, 50); // Adjust typing speed (milliseconds)
+    }
+  }
+
+  typeWriter();
+});
+
+
+
+
+// JavaScript for interactive effects
+  const numbers = document.querySelectorAll('.number');
+
+  // Add event listeners to each number
+  numbers.forEach(number => {
+    number.addEventListener('mouseenter', () => {
+      number.querySelector('p').style.color = 'yellow'; // Change number color
+    });
+
+    number.addEventListener('mouseleave', () => {
+      number.querySelector('p').style.color = '#333'; // Revert number color
+    });
+  });
+
+  document.getElementById("logo").addEventListener("mouseenter", function() {
+    this.src = "logo1.png";
+  });
+  
+  document.getElementById("logo").addEventListener("mouseleave", function() {
+    this.src = "logo.png";
+  });
+  
+  

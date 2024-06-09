@@ -21,8 +21,8 @@
   }
   
   .nav-option:hover {
-    background-color: #725540;
-    color: white;
+    background-color: #ab8f70;
+    color: rgb(255, 255, 255);
     border-radius: 20px; /* Apply rounded corners on hover */
   }
   
@@ -107,11 +107,22 @@
     position: absolute;
     width: 400px; /* Adjust size as needed */
     height: auto;
-    top: 480px; /* Adjust top position as needed */
+    top: 700px; /* Adjust top position as needed */
     left: 47%; /* Center horizontally */
     transform: translateX(-50%); /* Center the image */
     z-index: 0; /* Ensure it is behind the title */
+    animation: jump 1s infinite alternate;
 
+
+  }
+
+  @keyframes jump {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      transform: translate(-50%, -60%);
+    }
   }
 ____
 
@@ -229,7 +240,7 @@ button:hover {
 }
 
 .title {
-  font-size: 20px; /* Adjust font size as needed */
+  font-size: 25px; /* Adjust font size as needed */
   margin-bottom: 20px;
   font-family:Lao MN; font-weight: 50;
 }
@@ -242,7 +253,7 @@ button:hover {
 }
 
 .body-text {
-  font-size: 14px; /* Adjust font size as needed */
+  font-size: 16px; /* Adjust font size as needed */
   color: #201f1f;
   text-align: center; /* Align text to center */
 }
@@ -396,7 +407,7 @@ body {
 }
 
 .ball:hover {
-  background-color: #ffbe5f; /* Dark brown */
+  background-color: #cdb798; /* Dark brown */
 }
 
 * Manually position each ball */
@@ -419,3 +430,76 @@ body {
       top: 20%;
       left: 80%;
     }
+
+
+    .banner-container {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 80%; /* Adjust width as needed */
+      height: 30px; /* Adjust height as needed */
+      border: 1px solid #000;
+      margin: 0 auto; /* Center the banner */
+    }
+
+    .text-banner {
+      display: inline-block;
+      font-size: 18px; /* Adjust font size as needed */
+      white-space: nowrap; /* Prevent text from wrapping */
+      overflow: hidden; /* Hide overflow text */
+    }
+    
+    @keyframes moveText {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    
+        /* Adjust animation duration as needed */
+        .text-banner {
+          animation: moveText 30s linear infinite;
+        }
+        
+        .number {
+          position: relative; /* Needed for absolute positioning of the circles */
+          cursor: pointer; /* Change cursor to pointer on hover */
+        }
+      
+        .number::after {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 20px;
+          background-color: transparent;
+          border-radius: 50%; /* To make it a circle */
+          position: absolute;
+          bottom: -20px; /* Adjust as needed */
+          left: 90%; /* Center it horizontally under the number */
+          transform: translateX(-50%); /* Center it horizontally */
+          transition: background-color 0.3s ease; /* Smooth transition effect */
+        }
+      
+        .number:hover::after {
+          background-color: #ffd38d; /* Change background color on hover */
+        }
+
+        .logo-container {
+          position: relative;
+        }
+        
+        #logo {
+          position: absolute;
+          left: -500px; /* Adjust as needed */
+          width: 130px; /* Adjust the size as needed */
+          height: auto; /* Maintain aspect ratio */
+          transition: all 0.3s ease;
+        }
+        
+        #logo:hover {
+          cursor: pointer;
+          filter: grayscale(0%);
+        }
+        
+        
