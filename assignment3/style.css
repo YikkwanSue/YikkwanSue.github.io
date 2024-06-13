@@ -21,9 +21,9 @@
   }
   
   .nav-option:hover {
-    background-color: #ab8f70;
+    background-color: #7d6549;
     color: rgb(255, 255, 255);
-    border-radius: 20px; /* Apply rounded corners on hover */
+    border-radius: 20px; 
   }
   
 
@@ -407,7 +407,7 @@ body {
 }
 
 .ball:hover {
-  background-color: #cdb798; /* Dark brown */
+  background-color: #c9aa7e; /* Dark brown */
 }
 
 * Manually position each ball */
@@ -502,4 +502,40 @@ body {
           filter: grayscale(0%);
         }
         
+        footer {
+          background-color: #e9e7d9;
+          padding: 40px;
+        }
         
+        .footer-container {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+        
+        .contact-info,
+        .opening-hours,
+        .social-links {
+          flex: 0 0 40%; /* Adjust width as needed */
+        }
+        
+        .social-links ul {
+          list-style-type: none;
+          padding: 0;
+        }
+        
+        .social-links ul li {
+          margin-bottom: 10px;
+        }
+        
+        .social-links ul li a {
+          text-decoration: none;
+          color: #333;
+        }
+        
+        .copyright {
+          margin-top: 20px;
+          text-align: center;
+        }
+        
+        h3 {font-family:Lao MN; font-weight: 200;}

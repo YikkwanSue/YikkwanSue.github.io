@@ -1,4 +1,12 @@
-
+function navigateTo(page) {
+  if (page === 'home') {
+    window.open('index.html', '_blank');
+  } else if (page === 'ideas') {
+    window.open('inspiration/index.html', '_blank');
+  } else if (page === 'brief') {
+    window.open('game/index.html', '_blank');
+  }
+}
 
 // Staff
 
@@ -35,24 +43,27 @@ document.addEventListener("DOMContentLoaded", function() {
   
 });
 
+  // Get references to the audio elements
+  const ownerAudio = new Audio('owner.mp3');
+  const chiefAudio = new Audio('chief.mp3');
+  const managerAudio = new Audio('manager.mp3');
 
-
-
-const chiefAudio = new Audio('Chief.mp3');
-
-// Add an event listener to the chief image
-document.getElementById('chiefImage').addEventListener('click', function() {
-  chief.mp3.play();
+ // Add click event listeners to play audio files
+ ownerImage.addEventListener('click', function() {
+  ownerAudio.play();
 });
 
- document.addEventListener('DOMContentLoaded', function() {
-      const chiefImage = document.getElementById('chiefImage');
-      const chiefAudio = document.getElementById('chiefAudio');
+chiefImage.addEventListener('click', function() {
+  chiefAudio.play();
+});
 
-      chiefImage.addEventListener('click', function() {
-        chiefAudio.play();
-      });
-    });
+managerImage.addEventListener('click', function() {
+  managerAudio.play();
+});
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
   var text = " and our bakers are true artisans dedicated to their craft. We support local farmers and suppliers, giving back to our community with every bake.";
   var container = document.querySelector(".body-text");

@@ -1,21 +1,21 @@
-document.getElementById('clickButton').addEventListener('click', () => {
-    alert('Button clicked!');
-});
-
-const draggable = document.getElementById('draggable');
-
-draggable.addEventListener('dragstart', (event) => {
-    event.dataTransfer.setData('text/plain', 'This text may be dragged');
-});
-
-document.addEventListener('dragover', (event) => {
+function allowDrop(event) {
     event.preventDefault();
-});
-
-document.addEventListener('drop', (event) => {
+  }
+  
+  function drag(event) {
+    event.dataTransfer.setData("text", event.target.id);
+  }
+  
+  function drop(event) {
     event.preventDefault();
-    const data = event.dataTransfer.getData('text');
-    alert('Dropped: ' + data);
-});
-
-
+    var data = event.dataTransfer.getData("text");
+    var draggable = document.getElementById(data);
+    event.target.appendChild(draggable);
+    
+    // Check if the draggable is dropped in the target area
+    var targetArea = document.querySelector('.target-area');
+    if (targetArea.contains(draggable)) {
+      alert("You win!");
+    }
+  }
+  
