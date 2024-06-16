@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function() {
   
 });
 
-  // Get references to the audio elements
-  const ownerAudio = new Audio('owner.mp3');
-  const chiefAudio = new Audio('chief.mp3');
+  // Audio elements
+  const ownerAudio = new Audio('Owner.mp3');
+  const chiefAudio = new Audio('Chief.mp3');
   const managerAudio = new Audio('manager.mp3');
 
  // Add click event listeners to play audio files
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// JavaScript for interactive effects
+// Interactive effects
   const numbers = document.querySelectorAll('.number');
 
   // Add event listeners to each number
