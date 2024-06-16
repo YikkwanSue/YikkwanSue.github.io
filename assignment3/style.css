@@ -456,13 +456,13 @@ body {
       }
     }
     
-        /* Adjust animation duration as needed */
+        /* Adjust animation duration */
         .text-banner {
           animation: moveText 30s linear infinite;
         }
         
         .number {
-          position: relative; /* Needed for absolute positioning of the circles */
+          position: relative; /* Positioning of the circles */
           cursor: pointer; /* Change cursor to pointer on hover */
         }
       

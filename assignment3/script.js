@@ -6,6 +6,7 @@ function navigateTo(page) {
   } else if (page === 'brief') {
     window.open('game/index.html', '_blank');
   }
+  
 }
 
 // Staff
