@@ -1,13 +1,14 @@
+// Top button
 function navigateTo(page) {
   if (page === 'home') {
     window.open('index.html', '_blank');
-  } else if (page === 'ideas') {
+  } else if (page === 'inspiration') {
     window.open('inspiration/index.html', '_blank');
-  } else if (page === 'brief') {
+  } else if (page === 'game') {
     window.open('game/index.html', '_blank');
   }
-  
 }
+
 
 // Staff
 
