@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
   // Audio elements
-  const ownerAudio = new Audio('Owner.mp3');
-  const chiefAudio = new Audio('Chief.mp3');
+  const ownerAudio = new Audio('owner.mp3');
+  const chiefAudio = new Audio('chief.mp3');
   const managerAudio = new Audio('manager.mp3');
 
  // Add click event listeners to play audio files
