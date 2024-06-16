@@ -1,37 +1,70 @@
-
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-  }
+  background-color: #f9f7ef; /* Set the background color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {font-family:Lao MN; font-weight: 150;}
+
+
+:root {
+  --primary-bg-color: #f9f7ef;
+}
   
-  .container {
-    margin-top: 100px;
-  }
-  
-  h1 {
-    font-family:Parisienne ;
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #004bc8;
-  }
-  
-  input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #403e3e;
-    border-radius: 5px;
-  }
-  
-  #startBtn {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #startBtn:hover {
-    background-color: #007bff;
-  }
-  
+  body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.drop-box {
+  width: 300px;
+  height: 300px;
+  border: 2px dashed #dadada;
+  margin: 20px auto;
+  position: relative;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.draggable {
+  width: 50px; /* Adjusted width for smaller images */
+  cursor: pointer;
+}
+
+.colors {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #a79696;
+}
+
+#downloadButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
