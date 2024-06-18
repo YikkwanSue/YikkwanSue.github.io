@@ -6,6 +6,26 @@
     --main-btn-bg-color: #f5f5f5;
   }
 
+/* When users hover over different elements,
+ subtle animations or changes in color provide feedback, 
+ making the experience more dynamic. */
+  .logo-container {
+    position: relative;
+  }
+  
+  #logo {
+    position: absolute;
+    left: -500px;
+    width: 130px; /* Adjust the size */
+    height: auto; /* Maintain aspect ratio */
+    transition: all 0.3s ease;
+  }
+  
+  #logo:hover {
+    cursor: pointer;
+    filter: grayscale(0%);
+  }
+
    /* Search bar */
   .navigation-bar {
     display: flex;
@@ -102,11 +122,12 @@
 
   }
   
+/* keep bouncing, to add a dynamic and lively element to the site. */
   .dog-image {
     position: absolute;
-    width: 400px; /* Adjust size as needed */
+    width: 400px; 
     height: auto;
-    top: 700px; /* Adjust top position as needed */
+    top: 700px; /* Adjust top position */
     left: 47%; /* Center horizontally */
     transform: translateX(-50%); /* Center the image */
     z-index: 0; /* Ensure it is behind the title */
@@ -483,58 +504,3 @@ body {
         .number:hover::after {
           background-color: #ffd38d; /* Change background color on hover */
         }
-
-        .logo-container {
-          position: relative;
-        }
-        
-        #logo {
-          position: absolute;
-          left: -500px; /* Adjust as needed */
-          width: 130px; /* Adjust the size as needed */
-          height: auto; /* Maintain aspect ratio */
-          transition: all 0.3s ease;
-        }
-        
-        #logo:hover {
-          cursor: pointer;
-          filter: grayscale(0%);
-        }
-        
-        footer {
-          background-color: #e9e7d9;
-          padding: 40px;
-        }
-        
-        .footer-container {
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-        }
-        
-        .contact-info,
-        .opening-hours,
-        .social-links {
-          flex: 0 0 40%; /* Adjust width as needed */
-        }
-        
-        .social-links ul {
-          list-style-type: none;
-          padding: 0;
-        }
-        
-        .social-links ul li {
-          margin-bottom: 10px;
-        }
-        
-        .social-links ul li a {
-          text-decoration: none;
-          color: #333;
-        }
-        
-        .copyright {
-          margin-top: 20px;
-          text-align: center;
-        }
-        
-        h3 {font-family:Lao MN; font-weight: 200;}
