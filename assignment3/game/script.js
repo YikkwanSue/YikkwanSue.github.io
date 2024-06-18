@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const dropBox = document.getElementById('dropBox');
   const canvas = document.getElementById('canvas');
