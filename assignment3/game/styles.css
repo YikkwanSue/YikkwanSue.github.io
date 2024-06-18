@@ -4,8 +4,8 @@
 
 #logo {
   position: absolute;
-  left: -50px;
-  width: 90px; /* Adjust the size here */
+  left: -40px;
+  width: 80px; /* Adjust the size here */
   /* height: auto; */ /* Optional: ensures the height adjusts automatically */
 }
 
