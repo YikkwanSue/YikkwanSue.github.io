@@ -76,7 +76,7 @@ h1 {font-family:Lao MN; font-weight: 150;}
 
 #downloadButton {
   margin-top: 30px;  /* Reduce the margin-top */
-  padding: 10px 15px; /* Reduce the padding */
+  padding: 15px 20px; /* Reduce the padding */
   font-size: 14px;   /* Reduce the font size */
   cursor: pointer;
 }
